@@ -1,1 +1,56 @@
- 
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 防止滚动条出现 */
+}
+
+.popup-container {
+  position: fixed;
+  top: 20px; /* 默认位置 */
+  left: 20px; /* 默认位置 */
+  background: rgba(255, 255, 255, 0.1); /* 毛玻璃效果 */
+  backdrop-filter: blur(10px); /* 毛玻璃模糊效果 */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* 确保浮窗在最上层 */
+  cursor: move; /* 鼠标悬停时显示可拖动光标 */
+}
+
+.popup-container img {
+  width: 40px; /* 图标大小 */
+  height: 40px; /* 图标大小 */
+  position: absolute; /* 绝对定位 */
+  top: 10px; /* 图标位置 */
+  left: 10px; /* 图标位置 */
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+  margin-top: 60px; /* 留出图标空间 */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none; /* 禁止调整大小 */
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50; /* 按钮颜色 */
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc; /* 禁用状态颜色 */
+}
+
+img[alt="预览绘图"] {
+  margin-top: 10px;
+  max-width: 100%; /* 确保图片不超出容器 */
+  border-radius: 5px;
+} 
